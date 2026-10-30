@@ -40,20 +40,21 @@ Security-tool experimentation
 🏗️ Lab Architecture
 <img width="1346" height="616" alt="1-screenshot-title-image" src="https://github.com/user-attachments/assets/403726b2-f6e0-46f3-9fbd-4a5b59d37551" />
 
-⚙️ Lab Configuration
-🧩 Component	⚙️ Configuration
-🖥️ Host OS	           Windows 10
-🧠 Host RAM	12 GB
-⚡ Processor	Intel Core i5
-🧰 Hypervisor	VirtualBox 7.2
-🐉 Security OS	Kali Linux 2026.3
-🧠 Kali RAM	6161 MB
-🌐 Virtual Network	NAT Network
-📡 Network Address	10.0.0.0/24
-🐧 Kali IP Address	10.0.0.2/24
-🚪 Default Gateway	10.0.0.1
-🌍 DNS Server	8.8.8.8
-🔮 Future VM Range	10.0.0.3–10.0.0.99
+# ⚙️ Lab Configuration
+| 🧩 Component | ⚙️ Configuration |
+| :--- | :--- |
+| **🖥️ Host OS** | Windows 10 |
+| **🧠 Host RAM** | 8 GB |
+| **⚡ Processor** | Intel Core i7 |
+| **🧰 Hypervisor** | VirtualBox 7.2 |
+| **🐉 Security OS** | Kali Linux 2026.2 |
+| **🧠 Kali RAM** | 2048 MB |
+| **🌐 Virtual Network** | NAT Network |
+| **📡 Network Address** | 10.0.0.0/24 |
+| **🐧 Kali IP Address** | 10.0.0.2/24 |
+| **🚪 Default Gateway** | 10.0.0.1 |
+| **🌍 DNS Server** | 8.8.8.8 |
+| **🔮 Future VM Range** | 10.0.0.3–10.0.0.99 |
 
 🪜 Lab Setup Procedure
 Step 1. Install 7-Zip
@@ -102,4 +103,21 @@ DNS: 8.8.8.8
 A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
 
 <img width="1280" height="719" alt="IP configuration" src="https://github.com/user-attachments/assets/095a99d9-738e-4143-8a08-34bedab57480" />
+
+Step 6. Create a Clean VM Snapshot
+After completing the initial configuration, a VirtualBox snapshot was created.
+The snapshot represents the clean baseline of the laboratory.
+If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
+
+# 🔎 Lab Verification
+
+| ✅ Test | 🧾 Command | 🎯 Expected Result |
+| :--- | :--- | :--- |
+| **🌐 Check IP address** | `ip a` | Correct Kali IP displayed |
+| **📡 Test gateway** | `ping 10.0.0.1` | Successful replies |
+| **🌍 Test Internet connectivity** | `ping 8.8.8.8` | Successful replies |
+| **🔎 Test DNS resolution** | `nslookup networkwalks.com` | Domain resolves |
+| **🧰 Verify Nmap** | `nmap --version` | Nmap version displayed |
+| **🔄 Verify snapshot** | Restore snapshot and run `ip a` | Baseline configuration restored |
+
 
