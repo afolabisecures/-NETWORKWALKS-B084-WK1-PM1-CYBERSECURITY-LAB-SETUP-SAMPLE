@@ -62,11 +62,11 @@ The diagram below shows the general layout of the virtual lab.
 | Component | Configuration |
 |---|---|
 | Host operating system | Windows 10 |
-| Host memory | 8 GB RAM |
-| Processor | Intel Core i7 |
+| Host memory | 12 GB RAM |
+| Processor | Intel Core i5 |
 | Virtualisation software | VirtualBox 7.2 |
 | Guest operating system | Kali Linux 2026.2 |
-| Kali Linux memory (summary) | 2,048 MB |
+| Kali Linux memory (summary) | 6,161 MB |
 | Virtual network type | NAT Network |
 | Network address | `10.0.0.0/24` |
 | Kali Linux IP address | `10.0.0.2/24` |
@@ -185,8 +185,4 @@ I learned the importance of keeping clear records of commands, settings, screens
 
 > **Security reminder:** Use this lab only to practise on systems you own or have clear permission to test. Do not use its tools against unauthorised systems.
 
-## Details to Verify
 
-The original notes contain two different memory values for the Kali Linux VM: **2,048 MB** in the configuration summary and **6,161 MB** in the import section. Confirm the actual allocated memory and update the relevant entry so the README is consistent.
-
-The NAT Network has DHCP enabled, while Kali Linux is documented with the address `10.0.0.2`. Confirm that this address is reserved or configured appropriately to prevent an address conflict.
