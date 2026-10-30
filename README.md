@@ -127,7 +127,7 @@ A shared folder was also configured to transfer required files between the host 
 
 The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
 
-The example configuration is:
+The configuration is:
 
 | Network setting | Value |
 |---|---|
@@ -159,15 +159,33 @@ The following checks were used to verify the laboratory setup:
 | Verify Nmap installation | `nmap --version` | The installed Nmap version is displayed. |
 | Verify snapshot | Restore the snapshot, then run `ip a` | The baseline configuration is restored. |
 
-## Security and Usage Notice
+💡 What I Learned
+Through this project, I learned how to create and configure a virtual environment for cybersecurity practice.
 
-> **Important:** Use this laboratory only to test systems that you own or for which you have explicit permission to perform security testing. Do not use the lab or its tools to attack unauthorised systems.
+The most important concepts I learned include:
 
----
+1. NAT vs NAT Network
+A standard NAT configuration and a NAT Network serve different purposes.
 
-## Items to Confirm
+A NAT Network allows multiple VMs connected to the same virtual network to communicate with one another while providing network address translation for external connectivity.
 
-Before treating this README as the final record of the setup, verify these configuration details against the actual VirtualBox settings:
+This makes it useful for building a multi-machine cybersecurity laboratory.
 
-1. **Kali Linux RAM:** The configuration summary lists **2,048 MB**, while the import procedure records **6,161 MB**. Confirm the actual VM memory allocation and make both entries consistent.
-2. **DHCP and static addressing:** The NAT Network has DHCP enabled, while Kali Linux is documented with the fixed address `10.0.0.2`. Confirm that the address is reserved or configured in a way that avoids IP conflicts.
+2. Virtual Machine Networking
+I learned how VirtualBox virtual network adapters connect virtual machines to different types of networks and how network configuration affects communication between machines.
+
+3. Static IP Configuration
+I learned how to configure and verify IPv4 addressing, subnet masks, gateways, and DNS settings in Kali Linux.
+
+4. VM Snapshots
+I learned that a clean snapshot should be created before performing risky or experimental activities.
+
+This provides a known-good recovery point for future cybersecurity exercises.
+
+5. Documentation
+I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
+
+🔗 Tools & Resources
+7-Zip: https://7-zip.org/download.html
+VirtualBox: https://virtualbox.org/wiki/Downloads
+Kali Linux: https://kali.org/get-kali
