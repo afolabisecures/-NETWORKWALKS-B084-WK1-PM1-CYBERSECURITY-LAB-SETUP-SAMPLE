@@ -13,8 +13,6 @@
 - [Lab Architecture](#lab-architecture)
 - [Lab Configuration](#lab-configuration)
 - [Lab Setup Procedure](#lab-setup-procedure)
-- [Lab Verification](#lab-verification)
-- [Security and Usage Notice](#security-and-usage-notice)
 
 ## Project Overview
 
@@ -140,25 +138,6 @@ Using a consistent IP address makes it easier to document the lab and refer to t
 
 ![Kali Linux IP configuration](https://github.com/user-attachments/assets/095a99d9-738e-4143-8a08-34bedab57480)
 
-### Step 6: Create a Clean VM Snapshot
-
-After completing the initial configuration, a VirtualBox snapshot was created.
-
-The snapshot represents the clean baseline of the laboratory. If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
-
-## Lab Verification
-
-The following checks were used to verify the laboratory setup:
-
-| Test | Command | Expected result |
-|---|---|---|
-| Check IP address | `ip a` | Correct Kali Linux IP address is displayed. |
-| Test gateway connectivity | `ping 10.0.0.1` | Successful replies are received. |
-| Test internet connectivity | `ping 8.8.8.8` | Successful replies are received. |
-| Test DNS resolution | `nslookup networkwalks.com` | The domain resolves successfully. |
-| Verify Nmap installation | `nmap --version` | The installed Nmap version is displayed. |
-| Verify snapshot | Restore the snapshot, then run `ip a` | The baseline configuration is restored. |
-
 💡 What I Learned
 Through this project, I learned how to create and configure a virtual environment for cybersecurity practice.
 
@@ -189,3 +168,5 @@ I learned that documenting commands, configuration, screenshots, problems, and s
 7-Zip: https://7-zip.org/download.html
 VirtualBox: https://virtualbox.org/wiki/Downloads
 Kali Linux: https://kali.org/get-kali
+
+LinkedIn: (https://www.linkedin.com/in/emmanuel-afolabi-59a9b9289/
